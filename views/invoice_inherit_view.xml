@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem name="Report"
+              id="main_menu"
+              parent="account_accountant.menu_accounting"
+              sequence="10"  />
+
+         <menuitem name="Print Report"
+              id="sale_data_wizard_menu"
+              parent="main_menu"
+              action="invoice_data_action_wizard"
+              sequence="10"  />
+
+    </data>
+</odoo>

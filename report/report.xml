@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record id="report_invoice_data_xlsx_wizard" model="ir.actions.report">
+            <field name="name">Report invoice Excel Wizard</field>
+            <field name="model">sale.order.pdf.report</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">tak_print_xlxs.invoice_xlsx_report_wizard</field>
+            <field name="report_file">tak_print_xlxs.invoice_xlsx_report_wizard</field>
+<!--            <field name="binding_model_id" ref="model_car_data"/>-->
+            <field name="binding_type">report</field>
+        </record>
+
+    </data>
+</odoo>

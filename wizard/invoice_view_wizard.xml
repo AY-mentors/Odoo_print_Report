@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="invoice_data_report_wizard_form_view" model="ir.ui.view">
+            <field name="name">sale.order.pdf.report.form</field>
+            <field name="model">sale.order.pdf.report</field>
+            <field name="arch" type="xml">
+                <form string="Car Data New">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="invoices" placeholder="Title" widget="many2many_tags"/>
+                            </group>
+                            <group>
+                                <field name="date_from"/>
+                                <field name="date_to"/>
+                            </group>
+                        </group>
+                        <footer>
+<!--                            <button name="action_print_report" type="object" string="Print" class="btn-primary"/>-->
+                            <button name="action_generate_xlsx_report" type="object" string="Print xlsx" class="btn-primary"/>
+                            <button string="cancel" class="btn-secondary" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="invoice_data_action_wizard" model="ir.actions.act_window">
+            <field name="name">Invoice Data</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.order.pdf.report</field>
+            <field name="view_id" ref="invoice_data_report_wizard_form_view"/>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+    </data>
+</odoo>
